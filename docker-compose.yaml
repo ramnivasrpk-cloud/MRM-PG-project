@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  admin:
+    build: ./mrmpg-admin
+    container_name: admin-app
+    ports:
+      - "4174:4173"
+
+  backend:
+    build: ./mrmpg-backend
+    container_name: backend-app
+    ports:
+      - "5000:5000"
+
+  member:
+    build: ./mrmpg-member
+    container_name: member-app
+    ports:
+      - "8081:80"
+
+  user:
+    build: ./mrmpg-user
+    container_name: user-app
+    ports:
+      - "8082:80"
